@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script type="text/javascript">
+        function fun1(id) {
+            id.style.borderColor = "red"
+            id.style.borderWidth = "3px"
+        }
+        function fun2() {
+            var uname = document.getElementById("user").value;
+            var pass = document.getElementById("password").value;
+            var con_pass = document.getElementById("con_passford").value;
+            var pat = /^[^a-z\d]/i;
+            if (!pat.test(uname)) {
+                alert("Username must be only in Alphanumeric");
+            }
+            if (pass != con_pass) {
+                alert("Password Must be Same")
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <!-- Registration Form -->
+                <form>
+
+                    <!-- First Name and Last Name -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="first-Name" placeholder="Enter First Name"
+                                onfocus="fun1(this)">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Username</label>
+                            <input type="text" class="form-control" id="user" placeholder="Enter Username"
+                                onfocus="fun1(this)">
+                        </div>
+                    </div>
+
+                    <!-- Date of Birth and Mobile Number -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Enter Password"
+                                onfocus="fun1(this)">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="con_password">Confirm Password</label>
+                            <input type="password" class="form-control" id="con_password"
+                                placeholder="Enter Confirm Password" onfocus="fun1(this)">
+                        </div>
+                    </div>
+
+                    <!-- Gender, Address, City, Pincode, Email, State and Country -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="gender">Gender</label>
+                            <select id="gender" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="hobbies">Hobbies</label>
+                            <select id="sport" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Cricket</option>
+                                <option>Football</option>
+                                <option>Hockey</option>
+                                <option>Tennis</option>
+                                <option>Table Tennis</option>
+                                <option>Esports</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Enter Address"
+                                onfocus="fun1(this)">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="state">State</label>
+                            <input type="text" class="form-control" id="state" placeholder="Enter State"
+                                onfocus="fun1(this)">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="country">Country</label>
+                            <input type="text" class="form-control" id="country" placeholder="Enter Country"
+                                onfocus="fun1(this)">
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Buttons -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="submit" class="form-control btn btn-primary" id="submit" value="Submit"
+                                onclick="fun2()">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="reset" class="form-control btn btn-danger" id="reset" value="Reset">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script type="text/javascript">
+        function validateForm() {
+            var firstName = document.getElementById("first-Name").value;
+            var lastName = document.getElementById("last-Name").value;
+            var email = document.getElementById("email").value;
+
+            if (firstName.length > 20) {
+                alert("First name cannot be longer than 20 characters");
+            }
+
+            if (lastName.length > 20) {
+                alert("Last name cannot be longer than 20 characters");
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Invalid email address");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <!-- Registration Form -->
+                <form>
+
+                    <!-- First Name and Last Name -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="firstName">First Name</label>
+                            <input type="text" class="form-control" id="first-Name" placeholder="Enter First Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" class="form-control" id="last-Name" placeholder="Enter Last Name">
+                        </div>
+                    </div>
+
+                    <!-- Date of Birth and Mobile Number -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="dob">Date of Birth</label>
+                            <input type="date" class="form-control" id="dob">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="mobileNumber">Mobile Number</label>
+                            <input type="tel" class="form-control" id="mobileNumber" placeholder="Enter Mobile Number">
+                        </div>
+                    </div>
+
+                    <!-- Gender, Address, City, Pincode, Email, State and Country -->
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="gender">Gender</label>
+                            <select id="gender" class="form-control">
+                                <option selected>Choose...</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <label for="address">Address</label>
+                            <input type="text" class="form-control" id="address" placeholder="Enter Address">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter City">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="pincode">Pincode</label>
+                            <input type="text" class="form-control" id="pincode" placeholder="Enter Pincode">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="email">Email ID</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email ID">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="state">State</label>
+                            <input type="text" class="form-control" id="state" placeholder="Enter State">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="country">Country</label>
+                            <input type="text" class="form-control" id="country" placeholder="Enter Country">
+                        </div>
+                    </div>
+                    <!-- Qualification Table -->
+                    <h3 class="text-center">Qualification Table</h3>
+                    <br>
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="sr_no">Sr.No</label>
+                            <input type="text" class="form-control" id="sr_no" placeholder="Enter Sr.No">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="board">Board</label>
+                            <input type="text" class="form-control" id="board" placeholder="Enter Board">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="percentage">Percentage</label>
+                            <input type="text" class="form-control" id="percentage" placeholder="Enter Percentage">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="passing_year">Passing Year</label>
+                            <input type="text" class="form-control" id="passing_year" placeholder="Enter Passing Year">
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="course">Applied Course</label>
+                            <input type="text" class="form-control" id="course" placeholder="Enter Applied Course">
+                        </div>
+                    </div>
+                    <br>
+                    <!-- Buttons -->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input type="submit" class="form-control btn btn-primary" id="submit" value="Submit" onclick="validateForm()">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <input type="reset" class="form-control btn btn-danger" id="reset" value="Reset">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

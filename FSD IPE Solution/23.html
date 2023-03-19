@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function fun1(abc){
+            abc.innerHTML="Full Stack Development-1";
+            abc.style.border="5px solid black"
+            abc.style.fontSize="50px"
+        }
+        function fun2(xyz){
+            xyz.style.color="green"
+        }
+        function fun3(pqr){
+            pqr.style.color="orange"
+        }
+        function fun4(a){
+            a=document.getElementById("head1");
+            a.style.color="red"
+        }
+        function fun5(){
+            a=document.getElementById("head1");
+            a.style.color="blue"
+        }
+        function fun6(){
+            a=document.getElementById("head2");
+            a.style.textTransform="uppercase"
+        }
+        function fun7(){
+            a=document.getElementById("head2");
+            a.style.textTransform="lowercase"
+        }
+        function fun8(a){
+            d1= new Date();
+            document.write(d1);
+        }
+        function fun9(e){
+            val=e.button;
+            switch(val)
+            {
+                case 0:alert("You Click Left Button");
+                break
+                case 0:alert("You Click Middle Button");
+                break
+                case 0:alert("You Click Right Button");
+                break
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2 onclick="fun1(this)">Click Me</h2>
+    <h2 class="mouseover" onmouseover="fun2(this)" onmouseout="fun3(this)">Plz Mouse Over Me</h2>
+    <h2 id="head1">Click Button to Color Me.</h2>
+    <input type="submit" value="Red" onclick="fun4()">
+    <input type="submit" value="Blue" onclick="fun5()">
+    <h2 id="head2">Click Button to Transform Me.</h2>
+    <input type="submit" value="Uppercase" onclick="fun6()">
+    <input type="submit" value="Lowercase" onclick="fun7()">
+    <h2 class="head3">Date & Time</h2>
+    <input type="submit" value="Date & Time" onclick="fun8(this)"><br><br>
+    <div class="click" onmousedown="fun9(event)" style="width: 300px; height: 300px; background-color: blue;">Click me anywhere</div>
+</body>
+</html>

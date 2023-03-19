@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+
+    <script>
+        function fun1(){
+            pat=/^[A-Za-z]+$/;
+            fname=document.getElementById("name").value;
+            Email=document.getElementById("email").value;
+            
+            if(fname.length>20){
+                alert("Name Must be of minimun 20 letters")
+            }
+            if(!pat.test(fname)){
+                    alert("Name must be in only Character")
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 style="font-family: 'Times New Roman', Times, serif;">Feedback Form</h1><br>
+    <label for="name">Name:</label>
+    <input type="text" id="name"><br><br>
+    <label for="comment">Comment</label><br>
+    <textarea name="com" id="comment" cols="35" rows="5"></textarea><br><br>
+    <label for="email">Email Address:</label>
+    <input type="email" id="email"><br><br>
+    <h4>Things you like:</h4>
+    <input type="checkbox">Site Design
+    <input type="checkbox">Links
+    <input type="checkbox">Ease of Use
+    <input type="checkbox">Images
+    <input type="checkbox">Source Code
+    <br>
+    <h4>How did you get to our site?:</h4>
+    <input type="radio" name="site" value="s1">Search engine
+    <input type="radio" name="site" value="s1">Links from another site
+    <input type="radio" name="site" value="s1">Detail.com Website
+    <input type="radio" name="site" value="s1">Refrences in a book
+    <input type="radio" name="site" value="s1">others
+    <br><br>
+    <label>Rate our Site:</label>
+    <select name="rate" id="rate">
+        <option>Amazing</option>
+        <option>10</option>
+        <option>9</option>
+        <option>8</option>
+        <option>7</option>
+        <option>6</option>
+        <option>5</option>
+        <option>4</option>
+        <option>3</option>
+        <option>2</option>
+        <option>1</option>
+        <option>Useful</option>
+    </select><br><br>
+    <input type="submit" value="Submit" onclick="fun1()">
+    <input type="reset" value="Reset">
+</body>
+</html>

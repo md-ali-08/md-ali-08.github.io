@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration Form</title>
+    <script>
+      function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var phone = document.getElementById("phone").value;
+        var password = document.getElementById("password").value;
+        var confirm_password = document.getElementById("confirm_password").value;
+
+        // Regular expressions for validation
+        var name_regex = /^[a-zA-Z ]{2,30}$/;
+        var email_regex = /^([a-zA-Z0-9_\.\-])+@[a-zA-Z0-9\-]+\.[a-zA-Z]{2,}$/;
+        var phone_regex = /^\d{10}$/;
+        var password_regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+        // Validate name
+        if (!name_regex.test(name)) {
+          alert("Please enter a valid name");
+          return false;
+        }
+
+        // Validate email
+        if (!email_regex.test(email)) {
+          alert("Please enter a valid email address");
+          return false;
+        }
+
+        // Validate phone number
+        if (!phone_regex.test(phone)) {
+          alert("Please enter a valid 10-digit phone number");
+          return false;
+        }
+
+        // Validate password
+        if (!password_regex.test(password)) {
+          alert("Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, and one number");
+          return false;
+        }
+
+        // Validate confirm password
+        if (password != confirm_password) {
+          alert("Passwords do not match");
+          return false;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form name="myForm" onsubmit="return validateForm()">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br>
+
+      <label for="phone">Phone Number:</label>
+      <input type="text" id="phone" name="phone"><br>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br>
+
+      <label for="confirm_password">Confirm Password:</label>
+      <input type="password" id="confirm_password" name="confirm_password"><br>
+
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            position: relative;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            animation-name: zigzag;
+            animation-duration: 10s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes zigzag {
+            0%{
+                top: 0;
+                left :0;
+            }
+            25%{
+                background-color: yellow;
+                left: 1260px;
+                top: 0;
+            }
+            50% {
+                left: 0;
+                top: 550px;
+                background-color: green;
+            }
+
+            75% {
+                left: 1260px;
+                top: 550px;
+                background-color: blue;
+            }
+
+            100% {
+                left: 0;
+                top: 0;
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+</body>
+</html>
